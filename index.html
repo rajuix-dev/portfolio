@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raj Gupta — Full Stack Developer & AI Innovator</title>
+
+<!-- EmailJS Library -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ── CUSTOM CURSOR ── -->
+<div class="cursor" id="cursorDot"><div class="cursor-dot"></div></div>
+<div class="cursor" id="cursorRing"><div class="cursor-ring"></div></div>
+
+<!-- ── SCROLL TO TOP ── -->
+<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<!-- ── HIDDEN PHOTO INPUT ── -->
+<input type="file" id="photoInput" accept="image/*" style="display:none">
+
+<!-- ══════════════════════════════
+     NAVBAR
+══════════════════════════════ -->
+<nav id="navbar">
+  <div class="nav-logo">RG.</div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#experience">Journey</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ── MOBILE MENU ── -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about"      onclick="closeMobile()">About</a>
+  <a href="#skills"     onclick="closeMobile()">Skills</a>
+  <a href="#projects"   onclick="closeMobile()">Projects</a>
+  <a href="#experience" onclick="closeMobile()">Journey</a>
+  <a href="#services"   onclick="closeMobile()">Services</a>
+  <a href="#contact"    onclick="closeMobile()">Contact</a>
+</div>
+
+<!-- ══════════════════════════════
+     ANIMATED BACKGROUND
+══════════════════════════════ -->
+<div class="hero-bg">
+  <div class="hero-grid"></div>
+  <div class="orb orb1"></div>
+  <div class="orb orb2"></div>
+  <div class="orb orb3"></div>
+</div>
+
+<!-- ══════════════════════════════
+     HERO SECTION
+══════════════════════════════ -->
+<div class="hero">
+  <div class="hero-badge">
+    ✦ Available for opportunities
+  </div>
+
+  <h1 class="hero-name">Raj<br>Gupta</h1>
+
+  <div class="hero-tagline">
+    <em id="typed">Full Stack Developer</em>&nbsp;·&nbsp;
+    UI/UX Designer&nbsp;·&nbsp;AI Enthusiast
+  </div>
+
+  <p class="hero-desc">
+    B.Tech CSE student (2024–2028) crafting intelligent digital experiences —
+    from pixel-perfect interfaces to AI-powered systems.
+    Building the future, one line of code at a time.
+  </p>
+
+  <div class="hero-buttons">
+    <a href="#projects" class="btn btn-primary">View My Work ↓</a>
+    <a href="#contact"  class="btn btn-secondary">Get In Touch</a>
+    <a href="#"         class="btn btn-ghost" id="resumeBtn">⬇ Resume</a>
+  </div>
+
+  <!-- Floating Code Widget -->
+  <div class="hero-code">
+    <div class="code-bar">
+      <div class="bd bd-r"></div>
+      <div class="bd bd-y"></div>
+      <div class="bd bd-g"></div>
+    </div>
+    <div class="code-line"><span class="ck">const</span> <span class="cv">developer</span> = {</div>
+    <div class="code-line">&nbsp;&nbsp;<span class="cf">name</span>: <span class="cs">"Raj Gupta"</span>,</div>
+    <div class="code-line">&nbsp;&nbsp;<span class="cf">degree</span>: <span class="cs">"B.Tech CSE"</span>,</div>
+    <div class="code-line">&nbsp;&nbsp;<span class="cf">batch</span>: <span class="cs">"2024 – 2028"</span>,</div>
+    <div class="code-line">&nbsp;&nbsp;<span class="cf">stack</span>: [<span class="cs">"MERN"</span>, <span class="cs">"AI"</span>],</div>
+    <div class="code-line">&nbsp;&nbsp;<span class="cf">available</span>: <span class="cn">true</span></div>
+    <div class="code-line">};</div>
+  </div>
+
+  <!-- Tech Pills -->
+  <div class="tech-pills">
+    <span class="tech-pill">React.js</span>
+    <span class="tech-pill">Node.js</span>
+    <span class="tech-pill">MongoDB</span>
+    <span class="tech-pill">Python</span>
+    <span class="tech-pill">Figma</span>
+    <span class="tech-pill">AI/ML</span>
+    <span class="tech-pill">ESP32</span>
+    <span class="tech-pill">Express.js</span>
+  </div>
+</div>
+
+<div class="div-glow"></div>
+
+<!-- ══════════════════════════════
+     STATS BAR
+══════════════════════════════ -->
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div>
+      <div class="stat-num"><span class="counter" data-target="5">0</span>+</div>
+      <div class="stat-label">Projects Built</div>
+    </div>
+    <div>
+      <div class="stat-num"><span class="counter" data-target="11">0</span>+</div>
+      <div class="stat-label">Technologies</div>
+    </div>
+    <div>
+      <div class="stat-num"><span class="counter" data-target="1">0</span>+</div>
+      <div class="stat-label">Years Learning</div>
+    </div>
+    <div>
+      <div class="stat-num"><span class="counter" data-target="100">0</span>%</div>
+      <div class="stat-label">Dedication</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════
+     ABOUT SECTION
+══════════════════════════════ -->
+<section id="about" class="reveal">
+  <div class="section-header">
+    <span class="section-num">01 //</span>
+    <h2 class="section-title">About Me</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="about-grid">
+
+    <!-- Photo -->
+    <div class="about-visual">
+      <div class="photo-frame">
+        <div class="photo-ring-outer"></div>
+        <div class="photo-ring-inner"></div>
+        <div class="orbit-dot"></div>
+        <div class="orbit-dot2"></div>
+
+        <!-- Placeholder shown until user uploads photo -->
+        <div class="photo-placeholder" id="photoHolder">
+          <span>RG</span>
+          <span>Click to upload photo</span>
+        </div>
+
+        <!-- Real photo (hidden by default) -->
+        <img
+          id="profilePhoto"
+          class="photo-img"
+          src="raj.jpeg"
+          alt="Raj Gupta"
+          style="display:none"
+        >
+      </div>
+
+    </div>
+
+    <!-- Text -->
+    <div class="about-text">
+      <h3>Passionate Developer &amp; Innovator</h3>
+      <p>
+        I'm a B.Tech Computer Science Engineering student (2024–2028) with a deep
+        passion for building intelligent, user-centric digital products.
+        My journey spans full-stack development, AI solutions, and thoughtful UI/UX design.
+      </p>
+      <p>
+        I believe great software lives at the intersection of technical excellence and
+        creative vision. From architecting robust backends to designing delightful interfaces,
+        I bring a holistic approach to every project I work on.
+      </p>
+      <p>
+        Currently exploring the intersection of AI and web technologies to build
+        startup-grade products that solve real-world problems.
+      </p>
+
+      <div class="about-badges">
+        <span class="badge badge-v">🚀 Full Stack Dev</span>
+        <span class="badge badge-c">🤖 AI Solutions</span>
+        <span class="badge badge-e">🎨 UI/UX Design</span>
+        <span class="badge badge-a">📊 Data Analytics</span>
+        <span class="badge badge-v">💡 Startup Builder</span>
+      </div>
+
+      <div class="qualities">
+        <div class="quality"><span class="q-dot"></span>Problem Solver</div>
+        <div class="quality"><span class="q-dot"></span>Creative Thinker</div>
+        <div class="quality"><span class="q-dot"></span>Fast Learner</div>
+        <div class="quality"><span class="q-dot"></span>Team Player</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="div-glow"></div>
+
+<!-- ══════════════════════════════
+     SKILLS SECTION
+══════════════════════════════ -->
+<div class="alt-bg">
+<section id="skills" class="reveal">
+  <div class="section-header">
+    <span class="section-num">02 //</span>
+    <h2 class="section-title">Skills</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="skills-grid">
+    <div class="skill-card" style="--pct:88%"><span class="skill-icon">🌐</span><div class="skill-name">HTML</div><div class="skill-bar"><div class="skill-fill"></div></div><div class="skill-pct">88%</div></div>
+    <div class="skill-card" style="--pct:83%"><span class="skill-icon">🎨</span><div class="skill-name">CSS</div><div class="skill-bar"><div class="skill-fill"></div></div><div class="skill-pct">83%</div></div>
+    <div class="skill-card" style="--pct:80%"><span class="skill-icon">⚡</span><div class="skill-name">JavaScript</div><div class="skill-bar"><div class="skill-fill"></div></div><div class="skill-pct">80%</div></div>
+    <div class="skill-card" style="--pct:75%"><span class="skill-icon">⚛️</span><div class="skill-name">React.js</div><div class="skill-bar"><div class="skill-fill"></div></div><div class="skill-pct">75%</div></div>
+    <div class="skill-card" style="--pct:72%"><span class="skill-icon">🟢</span><div class="skill-name">Node.js</div><div class="skill-bar"><div class="skill-fill"></div></div><div class="skill-pct">72%</div></div>
+    <div class="skill-card" style="--pct:70%"><span class="skill-icon">🚂</span><div class="skill-name">Express.js</div><div class="skill-bar"><div class="skill-fill"></div></div><div class="skill-pct">70%</div></div>
+    <div class="skill-card" style="--pct:68%"><span class="skill-icon">🍃</span><div class="skill-name">MongoDB</div><div class="skill-bar"><div class="skill-fill"></div></div><div class="skill-pct">68%</div></div>
+    <div class="skill-card" style="--pct:75%"><span class="skill-icon">🐍</span><div class="skill-name">Python</div><div class="skill-bar"><div class="skill-fill"></div></div><div class="skill-pct">75%</div></div>
+    <div class="skill-card" style="--pct:82%"><span class="skill-icon">🐙</span><div class="skill-name">Git & GitHub</div><div class="skill-bar"><div class="skill-fill"></div></div><div class="skill-pct">82%</div></div>
+    <div class="skill-card" style="--pct:78%"><span class="skill-icon">✏️</span><div class="skill-name">Figma</div><div class="skill-bar"><div class="skill-fill"></div></div><div class="skill-pct">78%</div></div>
+    <div class="skill-card" style="--pct:65%"><span class="skill-icon">📊</span><div class="skill-name">Data Analytics</div><div class="skill-bar"><div class="skill-fill"></div></div><div class="skill-pct">65%</div></div>
+  </div>
+</section>
+</div>
+
+<div class="div-line"></div>
+
+<!-- ══════════════════════════════
+     PROJECTS SECTION
+══════════════════════════════ -->
+<section id="projects" class="reveal">
+  <div class="section-header">
+    <span class="section-num">03 //</span>
+    <h2 class="section-title">Projects</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="projects-grid">
+
+    <!-- Featured Project -->
+    <div class="project-card featured">
+      <div class="project-num">PROJECT_001 · FEATURED</div>
+      <span class="project-icon">🤖</span>
+      <h3>Sansal AI Platform</h3>
+      <p>
+        AI-powered multi-panel platform featuring a User Panel, Expert Panel, and Admin Dashboard.
+        Built with modern UI/UX, smart authentication, real-time analytics, and intelligent digital
+        solutions — designed for seamless expert-user interaction at scale.
+      </p>
+      <div class="project-tags">
+        <span class="project-tag">React.js</span>
+        <span class="project-tag">Node.js</span>
+        <span class="project-tag">MongoDB</span>
+        <span class="project-tag">AI/ML</span>
+        <span class="project-tag">Express.js</span>
+        <span class="project-tag">Figma</span>
+        <span class="project-tag">Analytics</span>
+      </div>
+      <div class="project-links">
+        <a href="#" class="project-link">★ Featured</a>
+        <a href="#" class="project-link">→ Case Study</a>
+      </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project-card">
+      <div class="project-num">PROJECT_002</div>
+      <span class="project-icon">⚡</span>
+      <h3>Smart Energy Meter</h3>
+      <p>
+        IoT-based smart electricity monitoring system using ESP32 microcontroller
+        and PZEM sensor for real-time power tracking, consumption analytics,
+        and intelligent energy management.
+      </p>
+      <div class="project-tags">
+        <span class="project-tag">ESP32</span>
+        <span class="project-tag">IoT</span>
+        <span class="project-tag">PZEM</span>
+        <span class="project-tag">Python</span>
+        <span class="project-tag">Analytics</span>
+      </div>
+      <div class="project-links">
+        <a href="#" class="project-link">→ Details</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="div-line"></div>
+
+<!-- ══════════════════════════════
+     EXPERIENCE / JOURNEY
+══════════════════════════════ -->
+<div class="alt-bg">
+<section id="experience" class="reveal">
+  <div class="section-header">
+    <span class="section-num">04 //</span>
+    <h2 class="section-title">My Journey</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="t-dot"></div>
+      <h3>AI Startup Development</h3>
+      <div class="t-meta">2024 — Present · Founder &amp; Developer</div>
+      <p>Conceptualized and built Sansal AI Platform from scratch — handling architecture, UI/UX design, backend APIs, database design, and AI feature integration across three distinct user panels.</p>
+    </div>
+    <div class="timeline-item">
+      <div class="t-dot c"></div>
+      <h3>Full Stack Development</h3>
+      <div class="t-meta">2024 — Present · Self-Directed Learning</div>
+      <p>Deep-dived into the MERN stack, building multiple responsive web applications. Mastered React component architecture, RESTful APIs with Express, and MongoDB data modeling.</p>
+    </div>
+    <div class="timeline-item">
+      <div class="t-dot e"></div>
+      <h3>UI/UX Design</h3>
+      <div class="t-meta">2024 — Present · Figma Practitioner</div>
+      <p>Developed a strong eye for design through creating dashboards, landing pages, and mobile-first interfaces — focused on user research, wireframing, and high-fidelity prototyping.</p>
+    </div>
+    <div class="timeline-item">
+      <div class="t-dot a"></div>
+      <h3>IoT &amp; Embedded Systems</h3>
+      <div class="t-meta">2024 · Hardware Project</div>
+      <p>Built a smart energy monitoring solution using ESP32 and PZEM sensors — combining hardware skills with software analytics dashboards.</p>
+    </div>
+    <div class="timeline-item">
+      <div class="t-dot c"></div>
+      <h3>B.Tech Computer Science Engineering</h3>
+      <div class="t-meta">2024 — 2028 · Student</div>
+      <p>Building a strong foundation in data structures, algorithms, software engineering, and CS fundamentals — complementing academics with hands-on project development.</p>
+    </div>
+  </div>
+</section>
+</div>
+
+<div class="div-line"></div>
+
+<!-- ══════════════════════════════
+     ACHIEVEMENTS SECTION
+══════════════════════════════ -->
+<section id="achievements" class="reveal">
+  <div class="section-header">
+    <span class="section-num">05 //</span>
+    <h2 class="section-title">Achievements</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="ach-grid">
+    <div class="ach-card"><div class="ach-icon">🚀</div><div><h4>AI-Based Startup</h4><p>Built and launched Sansal AI Platform — a full-stack AI-powered solution with real user and expert panels.</p></div></div>
+    <div class="ach-card"><div class="ach-icon">💻</div><div><h4>Responsive Web Apps</h4><p>Developed multiple production-grade responsive web applications using the MERN stack.</p></div></div>
+    <div class="ach-card"><div class="ach-icon">🎨</div><div><h4>Modern UI/UX Designs</h4><p>Created premium UI/UX designs for dashboards, landing pages, and mobile applications in Figma.</p></div></div>
+    <div class="ach-card"><div class="ach-icon">🌱</div><div><h4>Self-Learning Developer</h4><p>Mastered 11+ technologies independently through projects, documentation, and continuous practice.</p></div></div>
+    <div class="ach-card"><div class="ach-icon">⚡</div><div><h4>IoT Innovation</h4><p>Built smart energy meter combining ESP32 hardware with software analytics dashboards.</p></div></div>
+    <div class="ach-card"><div class="ach-icon">📊</div><div><h4>Data Analytics</h4><p>Applied data analytics skills to build intelligent dashboards and real-time monitoring systems.</p></div></div>
+  </div>
+</section>
+
+<div class="div-line"></div>
+
+<!-- ══════════════════════════════
+     SERVICES SECTION
+══════════════════════════════ -->
+<div class="alt-bg">
+<section id="services" class="reveal">
+  <div class="section-header">
+    <span class="section-num">06 //</span>
+    <h2 class="section-title">Services</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="svc-grid">
+    <div class="svc-card"><span class="svc-icon">🌐</span><h3>Website Dev</h3><p>Pixel-perfect, responsive websites with smooth animations and modern aesthetics.</p></div>
+    <div class="svc-card"><span class="svc-icon">⚙️</span><h3>Full Stack Dev</h3><p>End-to-end web applications from database architecture to polished frontend UI.</p></div>
+    <div class="svc-card"><span class="svc-icon">✏️</span><h3>UI/UX Design</h3><p>User-centered design systems, wireframes, and high-fidelity Figma prototypes.</p></div>
+    <div class="svc-card"><span class="svc-icon">📊</span><h3>Dashboard Design</h3><p>Data-driven admin dashboards and analytics interfaces with intuitive UX.</p></div>
+    <div class="svc-card"><span class="svc-icon">🤖</span><h3>AI Solutions</h3><p>Integrating AI/ML capabilities into web apps for smarter digital experiences.</p></div>
+  </div>
+</section>
+</div>
+
+<div class="div-line"></div>
+
+<!-- ══════════════════════════════
+     CONTACT SECTION (CORRECTED)
+══════════════════════════════ -->
+<section id="contact" class="reveal">
+  <div class="section-header">
+    <span class="section-num">07 //</span>
+    <h2 class="section-title">Contact</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="contact-grid">
+
+    <div class="contact-info">
+      <h3>Let's Build Something Great</h3>
+      <p>Whether you have a project in mind, a collaboration idea, or just want to connect — I'm always open to interesting conversations and opportunities.</p>
+      <p class="c-email">📧 raj.uixwebdev@gmail.com</p>
+
+      <div class="social-row">
+        <a href="https://github.com/rajuix-dev" class="social-link" target="_blank">⭐ GitHub</a>
+        <a href="https://www.linkedin.com/in/raj-gupta-40a896348" class="social-link" target="_blank">💼 LinkedIn</a>
+        <a href="https://x.com/RajGupt98490637" class="social-link" target="_blank">🐦 Twitter</a>
+      </div>
+
+      <a href="#" class="btn btn-primary" id="resumeBtn2">⬇ Download Resume</a>
+    </div>
+
+    <!-- ✅ CORRECTED FORM - EmailJS ke saath -->
+    <form id="contactForm" class="contact-form" onsubmit="return false;">
+      <div class="form-group">
+        <label>Your Name *</label>
+        <input type="text" name="from_name" id="fromName" placeholder="John Doe" required>
+      </div>
+      <div class="form-group">
+        <label>Email Address *</label>
+        <input type="email" name="from_email" id="fromEmail" placeholder="john@example.com" required>
+      </div>
+      <div class="form-group">
+        <label>Subject</label>
+        <input type="text" name="subject" id="subject" placeholder="Project Collaboration">
+      </div>
+      <div class="form-group">
+        <label>Message *</label>
+        <textarea name="message" id="message" placeholder="Tell me about your project..." required></textarea>
+      </div>
+      <button type="submit" id="submitBtn" class="btn btn-primary" style="width:100%;justify-content:center">
+        <span id="btnText">Send Message →</span>
+        <span id="btnLoader" style="display:none;">⏳ Sending...</span>
+      </button>
+      <div id="formStatus" style="display:none; padding: 0.8rem; border-radius: 7px; text-align: center; font-size: 0.85rem; margin-top: 0.5rem;"></div>
+    </form>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════
+     FOOTER
+══════════════════════════════ -->
+<div class="div-line"></div>
+<div class="footer-wrap">
+  <div>
+    <div class="footer-name">Raj Gupta</div>
+    <div class="footer-sub">B.Tech CSE (2024–2028) · Full Stack Developer · AI Innovator</div>
+  </div>
+  <div class="footer-right">Designed &amp; Built by Raj Gupta · 2025</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
