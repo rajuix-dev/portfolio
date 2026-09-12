@@ -3,475 +3,418 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Raj Gupta — Full Stack Developer & AI Innovator</title>
+<title>Raj Gupta — Full Stack Developer &amp; UI/UX Designer</title>
+<meta name="description" content="Raj Gupta — B.Tech CSE student, full-stack developer and UI/UX designer. Portfolio, projects and contact.">
 
 <!-- EmailJS Library -->
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Work+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- ── CUSTOM CURSOR ── -->
-<div class="cursor" id="cursorDot"><div class="cursor-dot"></div></div>
-<div class="cursor" id="cursorRing"><div class="cursor-ring"></div></div>
-
-<!-- ── SCROLL TO TOP ── -->
-<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
-
-<!-- ── HIDDEN PHOTO INPUT ── -->
-<input type="file" id="photoInput" accept="image/*" style="display:none">
-
 <!-- ══════════════════════════════
-     NAVBAR
+     MASTHEAD
 ══════════════════════════════ -->
-<nav id="navbar">
-  <div class="nav-logo">RG.</div>
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#experience">Journey</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-  <button class="hamburger" id="hamburger">
+<header class="masthead" id="navbar">
+  <a href="#top" class="masthead-mark">Raj Gupta</a>
+
+  <nav class="masthead-nav">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Work</a>
+    <a href="#miniprojects">Mini Projects</a>
+    <a href="#experience">Journey</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="masthead-status">
+    <span class="status-dot"></span>Open to work
+  </div>
+
+  <button class="hamburger" id="hamburger" aria-label="Menu">
     <span></span><span></span><span></span>
   </button>
-</nav>
+</header>
 
 <!-- ── MOBILE MENU ── -->
 <div class="mobile-menu" id="mobileMenu">
-  <a href="#about"      onclick="closeMobile()">About</a>
-  <a href="#skills"     onclick="closeMobile()">Skills</a>
-  <a href="#projects"   onclick="closeMobile()">Projects</a>
+  <a href="#about" onclick="closeMobile()">About</a>
+  <a href="#skills" onclick="closeMobile()">Skills</a>
+  <a href="#projects" onclick="closeMobile()">Work</a>
+  <a href="#miniprojects" onclick="closeMobile()">Mini Projects</a>
   <a href="#experience" onclick="closeMobile()">Journey</a>
-  <a href="#services"   onclick="closeMobile()">Services</a>
-  <a href="#contact"    onclick="closeMobile()">Contact</a>
+  <a href="#contact" onclick="closeMobile()">Contact</a>
 </div>
 
-<!-- ══════════════════════════════
-     ANIMATED BACKGROUND
-══════════════════════════════ -->
-<div class="hero-bg">
-  <div class="hero-grid"></div>
-  <div class="orb orb1"></div>
-  <div class="orb orb2"></div>
-  <div class="orb orb3"></div>
-</div>
+<main id="top">
 
 <!-- ══════════════════════════════
-     HERO SECTION
+     HERO
 ══════════════════════════════ -->
-<div class="hero">
-  <div class="hero-badge">
-    ✦ Available for opportunities
-  </div>
-
-  <h1 class="hero-name">Raj<br>Gupta</h1>
-
-  <div class="hero-tagline">
-    <em id="typed">Full Stack Developer</em>&nbsp;·&nbsp;
-    UI/UX Designer&nbsp;·&nbsp;AI Enthusiast
-  </div>
-
-  <p class="hero-desc">
-    B.Tech CSE student (2024–2028) crafting intelligent digital experiences —
-    from pixel-perfect interfaces to AI-powered systems.
-    Building the future, one line of code at a time.
-  </p>
-
-  <div class="hero-buttons">
-    <a href="#projects" class="btn btn-primary">View My Work ↓</a>
-    <a href="#contact"  class="btn btn-secondary">Get In Touch</a>
-    <a href="#"         class="btn btn-ghost" id="resumeBtn">⬇ Resume</a>
-  </div>
-
-  <!-- Floating Code Widget -->
-  <div class="hero-code">
-    <div class="code-bar">
-      <div class="bd bd-r"></div>
-      <div class="bd bd-y"></div>
-      <div class="bd bd-g"></div>
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-main">
+      <h1 class="hero-name">Raj Gupta</h1>
+      <p class="hero-role">A full-stack developer and UI/UX designer studying Computer Science, building responsive, user-focused web applications from interface to database.</p>
+      <p class="hero-desc">Currently a B.Tech Computer Science Engineering student, working across React, Node.js and MongoDB, with a parallel interest in clean, usable interface design.</p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn-ink">See the work</a>
+        <a href="#contact" class="btn-line">Get in touch</a>
+      </div>
     </div>
-    <div class="code-line"><span class="ck">const</span> <span class="cv">developer</span> = {</div>
-    <div class="code-line">&nbsp;&nbsp;<span class="cf">name</span>: <span class="cs">"Raj Gupta"</span>,</div>
-    <div class="code-line">&nbsp;&nbsp;<span class="cf">degree</span>: <span class="cs">"B.Tech CSE"</span>,</div>
-    <div class="code-line">&nbsp;&nbsp;<span class="cf">batch</span>: <span class="cs">"2024 – 2028"</span>,</div>
-    <div class="code-line">&nbsp;&nbsp;<span class="cf">stack</span>: [<span class="cs">"MERN"</span>, <span class="cs">"AI"</span>],</div>
-    <div class="code-line">&nbsp;&nbsp;<span class="cf">available</span>: <span class="cn">true</span></div>
-    <div class="code-line">};</div>
-  </div>
 
-  <!-- Tech Pills -->
-  <div class="tech-pills">
-    <span class="tech-pill">React.js</span>
-    <span class="tech-pill">Node.js</span>
-    <span class="tech-pill">MongoDB</span>
-    <span class="tech-pill">Python</span>
-    <span class="tech-pill">Figma</span>
-    <span class="tech-pill">AI/ML</span>
-    <span class="tech-pill">ESP32</span>
-    <span class="tech-pill">Express.js</span>
-  </div>
-</div>
-
-<div class="div-glow"></div>
-
-<!-- ══════════════════════════════
-     STATS BAR
-══════════════════════════════ -->
-<div class="stats-bar">
-  <div class="stats-inner">
-    <div>
-      <div class="stat-num"><span class="counter" data-target="5">0</span>+</div>
-      <div class="stat-label">Projects Built</div>
-    </div>
-    <div>
-      <div class="stat-num"><span class="counter" data-target="11">0</span>+</div>
-      <div class="stat-label">Technologies</div>
-    </div>
-    <div>
-      <div class="stat-num"><span class="counter" data-target="1">0</span>+</div>
-      <div class="stat-label">Years Learning</div>
-    </div>
-    <div>
-      <div class="stat-num"><span class="counter" data-target="100">0</span>%</div>
-      <div class="stat-label">Dedication</div>
-    </div>
-  </div>
-</div>
-
-<!-- ══════════════════════════════
-     ABOUT SECTION
-══════════════════════════════ -->
-<section id="about" class="reveal">
-  <div class="section-header">
-    <span class="section-num">01 //</span>
-    <h2 class="section-title">About Me</h2>
-    <div class="section-line"></div>
-  </div>
-
-  <div class="about-grid">
-
-    <!-- Photo -->
-    <div class="about-visual">
-      <div class="photo-frame">
-        <div class="photo-ring-outer"></div>
-        <div class="photo-ring-inner"></div>
-        <div class="orbit-dot"></div>
-        <div class="orbit-dot2"></div>
-
-        <!-- Placeholder shown until user uploads photo -->
-        <div class="photo-placeholder" id="photoHolder">
-          <span>RG</span>
-          <span>Click to upload photo</span>
+    <aside class="hero-aside">
+      <div class="code-window">
+        <div class="code-window-bar">
+          <span></span><span></span><span></span>
         </div>
-
-        <!-- Real photo (hidden by default) -->
-        <img
-          id="profilePhoto"
-          class="photo-img"
-          src="raj.jpeg"
-          alt="Raj Gupta"
-          style="display:none"
-        >
+        <div class="code-window-body">
+          <div class="code-line"><span class="ck">const</span> <span class="cv">developer</span> = {</div>
+          <div class="code-line">&nbsp;&nbsp;<span class="cf">name</span>: <span class="cs">"Raj Gupta"</span>,</div>
+          <div class="code-line">&nbsp;&nbsp;<span class="cf">degree</span>: <span class="cs">"B.Tech CSE"</span>,</div>
+          <div class="code-line">&nbsp;&nbsp;<span class="cf">stack</span>: <span class="cs">"Full Stack"</span>,</div>
+          <div class="code-line">&nbsp;&nbsp;<span class="cf">focus</span>: [<span class="cs">"Web"</span>, <span class="cs">"UI/UX"</span>],</div>
+          <div class="code-line">&nbsp;&nbsp;<span class="cf">learning</span>: <span class="cn">true</span></div>
+          <div class="code-line">};</div>
+        </div>
       </div>
 
+      <ul class="hero-stack">
+        <li>React.js</li><li>Node.js</li><li>Express.js</li><li>MongoDB</li>
+        <li>MySQL</li><li>JavaScript</li><li>Tailwind CSS</li><li>Figma</li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<!-- ══════════════════════════════
+     STAT STRIP
+══════════════════════════════ -->
+<div class="stat-strip">
+  <div class="container stat-strip-inner">
+    <div class="stat"><span class="stat-num">3</span><span class="stat-label">Major projects</span></div>
+    <div class="stat"><span class="stat-num">13</span><span class="stat-label">Mini projects</span></div>
+    <div class="stat"><span class="stat-num">4</span><span class="stat-label">Languages</span></div>
+    <div class="stat"><span class="stat-num">5</span><span class="stat-label">Frontend skills</span></div>
+    <div class="stat"><span class="stat-num">3</span><span class="stat-label">Backend skills</span></div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════
+     ABOUT
+══════════════════════════════ -->
+<section id="about">
+  <div class="container about-grid">
+
+    <div class="about-photo">
+      <div class="photo-frame">
+        <img src="raj.jpeg" alt="Portrait of Raj Gupta">
+      </div>
     </div>
 
-    <!-- Text -->
     <div class="about-text">
-      <h3>Passionate Developer &amp; Innovator</h3>
+      <div class="section-head">
+        <h2>About</h2>
+        <div class="rule"></div>
+      </div>
+
+      <h3>Full-stack developer &amp; UI/UX designer</h3>
       <p>
-        I'm a B.Tech Computer Science Engineering student (2024–2028) with a deep
-        passion for building intelligent, user-centric digital products.
-        My journey spans full-stack development, AI solutions, and thoughtful UI/UX design.
+        I'm a B.Tech Computer Science Engineering student (2024–2028) with hands-on experience
+        in full-stack web development and UI/UX design. I enjoy building responsive, user-focused
+        applications with modern frontend and backend technologies.
       </p>
       <p>
-        I believe great software lives at the intersection of technical excellence and
-        creative vision. From architecting robust backends to designing delightful interfaces,
-        I bring a holistic approach to every project I work on.
+        My experience spans React.js, Node.js, Express.js and MongoDB, along with REST APIs,
+        authentication, database integration, responsive design and UI/UX workflows in Figma.
       </p>
       <p>
-        Currently exploring the intersection of AI and web technologies to build
-        startup-grade products that solve real-world problems.
+        I care about practical solutions — clean interfaces, strong usability and reliable
+        backend integration, rather than complexity for its own sake.
       </p>
 
-      <div class="about-badges">
-        <span class="badge badge-v">🚀 Full Stack Dev</span>
-        <span class="badge badge-c">🤖 AI Solutions</span>
-        <span class="badge badge-e">🎨 UI/UX Design</span>
-        <span class="badge badge-a">📊 Data Analytics</span>
-        <span class="badge badge-v">💡 Startup Builder</span>
-      </div>
-
-      <div class="qualities">
-        <div class="quality"><span class="q-dot"></span>Problem Solver</div>
-        <div class="quality"><span class="q-dot"></span>Creative Thinker</div>
-        <div class="quality"><span class="q-dot"></span>Fast Learner</div>
-        <div class="quality"><span class="q-dot"></span>Team Player</div>
-      </div>
+      <ul class="qualities">
+        <li>Problem solving</li>
+        <li>Attention to detail</li>
+        <li>Team collaboration</li>
+        <li>Adaptability</li>
+        <li>Quick learner</li>
+        <li>Communication</li>
+      </ul>
     </div>
 
   </div>
 </section>
 
-<div class="div-glow"></div>
-
 <!-- ══════════════════════════════
-     SKILLS SECTION
+     SKILLS
 ══════════════════════════════ -->
-<div class="alt-bg">
-<section id="skills" class="reveal">
-  <div class="section-header">
-    <span class="section-num">02 //</span>
-    <h2 class="section-title">Skills</h2>
-    <div class="section-line"></div>
-  </div>
+<section id="skills" class="section-tinted">
+  <div class="container">
+    <div class="section-head">
+      <h2>Skills</h2>
+      <div class="rule"></div>
+    </div>
 
-  <div class="skills-grid">
-    <div class="skill-card" style="--pct:88%"><span class="skill-icon">🌐</span><div class="skill-name">HTML</div><div class="skill-bar"><div class="skill-fill"></div></div><div class="skill-pct">88%</div></div>
-    <div class="skill-card" style="--pct:83%"><span class="skill-icon">🎨</span><div class="skill-name">CSS</div><div class="skill-bar"><div class="skill-fill"></div></div><div class="skill-pct">83%</div></div>
-    <div class="skill-card" style="--pct:80%"><span class="skill-icon">⚡</span><div class="skill-name">JavaScript</div><div class="skill-bar"><div class="skill-fill"></div></div><div class="skill-pct">80%</div></div>
-    <div class="skill-card" style="--pct:75%"><span class="skill-icon">⚛️</span><div class="skill-name">React.js</div><div class="skill-bar"><div class="skill-fill"></div></div><div class="skill-pct">75%</div></div>
-    <div class="skill-card" style="--pct:72%"><span class="skill-icon">🟢</span><div class="skill-name">Node.js</div><div class="skill-bar"><div class="skill-fill"></div></div><div class="skill-pct">72%</div></div>
-    <div class="skill-card" style="--pct:70%"><span class="skill-icon">🚂</span><div class="skill-name">Express.js</div><div class="skill-bar"><div class="skill-fill"></div></div><div class="skill-pct">70%</div></div>
-    <div class="skill-card" style="--pct:68%"><span class="skill-icon">🍃</span><div class="skill-name">MongoDB</div><div class="skill-bar"><div class="skill-fill"></div></div><div class="skill-pct">68%</div></div>
-    <div class="skill-card" style="--pct:75%"><span class="skill-icon">🐍</span><div class="skill-name">Python</div><div class="skill-bar"><div class="skill-fill"></div></div><div class="skill-pct">75%</div></div>
-    <div class="skill-card" style="--pct:82%"><span class="skill-icon">🐙</span><div class="skill-name">Git & GitHub</div><div class="skill-bar"><div class="skill-fill"></div></div><div class="skill-pct">82%</div></div>
-    <div class="skill-card" style="--pct:78%"><span class="skill-icon">✏️</span><div class="skill-name">Figma</div><div class="skill-bar"><div class="skill-fill"></div></div><div class="skill-pct">78%</div></div>
-    <div class="skill-card" style="--pct:65%"><span class="skill-icon">📊</span><div class="skill-name">Data Analytics</div><div class="skill-bar"><div class="skill-fill"></div></div><div class="skill-pct">65%</div></div>
-  </div>
-</section>
-</div>
+    <div class="skills-columns">
 
-<div class="div-line"></div>
-
-<!-- ══════════════════════════════
-     PROJECTS SECTION
-══════════════════════════════ -->
-<section id="projects" class="reveal">
-  <div class="section-header">
-    <span class="section-num">03 //</span>
-    <h2 class="section-title">Projects</h2>
-    <div class="section-line"></div>
-  </div>
-
-  <div class="projects-grid">
-
-    <!-- Featured Project -->
-    <div class="project-card featured">
-      <div class="project-num">PROJECT_001 · FEATURED</div>
-      <span class="project-icon">🤖</span>
-      <h3>Sansal AI Platform</h3>
-      <p>
-        AI-powered multi-panel platform featuring a User Panel, Expert Panel, and Admin Dashboard.
-        Built with modern UI/UX, smart authentication, real-time analytics, and intelligent digital
-        solutions — designed for seamless expert-user interaction at scale.
-      </p>
-      <div class="project-tags">
-        <span class="project-tag">React.js</span>
-        <span class="project-tag">Node.js</span>
-        <span class="project-tag">MongoDB</span>
-        <span class="project-tag">AI/ML</span>
-        <span class="project-tag">Express.js</span>
-        <span class="project-tag">Figma</span>
-        <span class="project-tag">Analytics</span>
+      <div class="skill-group">
+        <h4>Languages</h4>
+        <ul class="skill-list">
+          <li><span>C</span><span class="tier">Proficient</span></li>
+          <li><span>C++</span><span class="tier">Proficient</span></li>
+          <li><span>Python</span><span class="tier">Proficient</span></li>
+          <li><span>JavaScript</span><span class="tier">Advanced</span></li>
+        </ul>
       </div>
-      <div class="project-links">
-        <a href="#" class="project-link">★ Featured</a>
-        <a href="#" class="project-link">→ Case Study</a>
+
+      <div class="skill-group">
+        <h4>Frontend</h4>
+        <ul class="skill-list">
+          <li><span>HTML5</span><span class="tier">Advanced</span></li>
+          <li><span>CSS3</span><span class="tier">Advanced</span></li>
+          <li><span>React.js</span><span class="tier">Advanced</span></li>
+          <li><span>Bootstrap</span><span class="tier">Proficient</span></li>
+          <li><span>Tailwind CSS</span><span class="tier">Proficient</span></li>
+        </ul>
       </div>
-    </div>
 
-    <!-- Project 2 -->
-    <div class="project-card">
-      <div class="project-num">PROJECT_002</div>
-      <span class="project-icon">⚡</span>
-      <h3>Smart Energy Meter</h3>
-      <p>
-        IoT-based smart electricity monitoring system using ESP32 microcontroller
-        and PZEM sensor for real-time power tracking, consumption analytics,
-        and intelligent energy management.
-      </p>
-      <div class="project-tags">
-        <span class="project-tag">ESP32</span>
-        <span class="project-tag">IoT</span>
-        <span class="project-tag">PZEM</span>
-        <span class="project-tag">Python</span>
-        <span class="project-tag">Analytics</span>
+      <div class="skill-group">
+        <h4>Backend &amp; data</h4>
+        <ul class="skill-list">
+          <li><span>Node.js</span><span class="tier">Proficient</span></li>
+          <li><span>Express.js</span><span class="tier">Proficient</span></li>
+          <li><span>MongoDB</span><span class="tier">Proficient</span></li>
+          <li><span>MySQL</span><span class="tier">Familiar</span></li>
+        </ul>
       </div>
-      <div class="project-links">
-        <a href="#" class="project-link">→ Details</a>
+
+      <div class="skill-group">
+        <h4>Tools</h4>
+        <ul class="skill-list">
+          <li><span>Git &amp; GitHub</span><span class="tier">Proficient</span></li>
+          <li><span>Postman</span><span class="tier">Proficient</span></li>
+          <li><span>Figma</span><span class="tier">Advanced</span></li>
+          <li><span>Canva</span><span class="tier">Proficient</span></li>
+        </ul>
       </div>
-    </div>
 
-  </div>
-</section>
-
-<div class="div-line"></div>
-
-<!-- ══════════════════════════════
-     EXPERIENCE / JOURNEY
-══════════════════════════════ -->
-<div class="alt-bg">
-<section id="experience" class="reveal">
-  <div class="section-header">
-    <span class="section-num">04 //</span>
-    <h2 class="section-title">My Journey</h2>
-    <div class="section-line"></div>
-  </div>
-
-  <div class="timeline">
-    <div class="timeline-item">
-      <div class="t-dot"></div>
-      <h3>AI Startup Development</h3>
-      <div class="t-meta">2024 — Present · Founder &amp; Developer</div>
-      <p>Conceptualized and built Sansal AI Platform from scratch — handling architecture, UI/UX design, backend APIs, database design, and AI feature integration across three distinct user panels.</p>
-    </div>
-    <div class="timeline-item">
-      <div class="t-dot c"></div>
-      <h3>Full Stack Development</h3>
-      <div class="t-meta">2024 — Present · Self-Directed Learning</div>
-      <p>Deep-dived into the MERN stack, building multiple responsive web applications. Mastered React component architecture, RESTful APIs with Express, and MongoDB data modeling.</p>
-    </div>
-    <div class="timeline-item">
-      <div class="t-dot e"></div>
-      <h3>UI/UX Design</h3>
-      <div class="t-meta">2024 — Present · Figma Practitioner</div>
-      <p>Developed a strong eye for design through creating dashboards, landing pages, and mobile-first interfaces — focused on user research, wireframing, and high-fidelity prototyping.</p>
-    </div>
-    <div class="timeline-item">
-      <div class="t-dot a"></div>
-      <h3>IoT &amp; Embedded Systems</h3>
-      <div class="t-meta">2024 · Hardware Project</div>
-      <p>Built a smart energy monitoring solution using ESP32 and PZEM sensors — combining hardware skills with software analytics dashboards.</p>
-    </div>
-    <div class="timeline-item">
-      <div class="t-dot c"></div>
-      <h3>B.Tech Computer Science Engineering</h3>
-      <div class="t-meta">2024 — 2028 · Student</div>
-      <p>Building a strong foundation in data structures, algorithms, software engineering, and CS fundamentals — complementing academics with hands-on project development.</p>
     </div>
   </div>
 </section>
-</div>
-
-<div class="div-line"></div>
 
 <!-- ══════════════════════════════
-     ACHIEVEMENTS SECTION
+     PROJECTS / WORK
 ══════════════════════════════ -->
-<section id="achievements" class="reveal">
-  <div class="section-header">
-    <span class="section-num">05 //</span>
-    <h2 class="section-title">Achievements</h2>
-    <div class="section-line"></div>
-  </div>
+<section id="projects">
+  <div class="container">
+    <div class="section-head">
+      <h2>Major projects</h2>
+      <div class="rule"></div>
+    </div>
 
-  <div class="ach-grid">
-    <div class="ach-card"><div class="ach-icon">🚀</div><div><h4>AI-Based Startup</h4><p>Built and launched Sansal AI Platform — a full-stack AI-powered solution with real user and expert panels.</p></div></div>
-    <div class="ach-card"><div class="ach-icon">💻</div><div><h4>Responsive Web Apps</h4><p>Developed multiple production-grade responsive web applications using the MERN stack.</p></div></div>
-    <div class="ach-card"><div class="ach-icon">🎨</div><div><h4>Modern UI/UX Designs</h4><p>Created premium UI/UX designs for dashboards, landing pages, and mobile applications in Figma.</p></div></div>
-    <div class="ach-card"><div class="ach-icon">🌱</div><div><h4>Self-Learning Developer</h4><p>Mastered 11+ technologies independently through projects, documentation, and continuous practice.</p></div></div>
-    <div class="ach-card"><div class="ach-icon">⚡</div><div><h4>IoT Innovation</h4><p>Built smart energy meter combining ESP32 hardware with software analytics dashboards.</p></div></div>
-    <div class="ach-card"><div class="ach-icon">📊</div><div><h4>Data Analytics</h4><p>Applied data analytics skills to build intelligent dashboards and real-time monitoring systems.</p></div></div>
+    <div class="project-list">
+
+      <article class="project-row featured">
+        <div class="project-meta">Featured · Full-stack application</div>
+        <div class="project-body">
+          <h3>Wanderlust</h3>
+          <p>A full-stack web application with authentication, property listings, and reviews and ratings, plus search, filtering and maps.</p>
+          <ul class="tag-list">
+            <li>React.js</li><li>Node.js</li><li>Express.js</li><li>MongoDB</li><li>Authentication</li><li>Maps</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="project-row">
+        <div class="project-meta">Personal project</div>
+        <div class="project-body">
+          <h3>Personal portfolio website</h3>
+          <p>A responsive portfolio site designed and developed from scratch to present projects, skills and professional background.</p>
+          <ul class="tag-list">
+            <li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>Figma</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="project-row">
+        <div class="project-meta">E-commerce practice project</div>
+        <div class="project-body">
+          <h3>Amazon Clone</h3>
+          <p>A frontend e-commerce web application inspired by Amazon, featuring product listings, search, navigation, and a responsive shopping interface.</p>
+          <ul class="tag-list">
+            <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Responsive Design</li>
+          </ul>
+        </div>
+      </article>
+
+
+    </div>
   </div>
 </section>
 
-<div class="div-line"></div>
-
 <!-- ══════════════════════════════
-     SERVICES SECTION
+     MINI PROJECTS
 ══════════════════════════════ -->
-<div class="alt-bg">
-<section id="services" class="reveal">
-  <div class="section-header">
-    <span class="section-num">06 //</span>
-    <h2 class="section-title">Services</h2>
-    <div class="section-line"></div>
-  </div>
+<section id="miniprojects" class="section-tinted">
+  <div class="container">
+    <div class="section-head">
+      <h2>Mini projects</h2>
+      <div class="rule"></div>
+    </div>
 
-  <div class="svc-grid">
-    <div class="svc-card"><span class="svc-icon">🌐</span><h3>Website Dev</h3><p>Pixel-perfect, responsive websites with smooth animations and modern aesthetics.</p></div>
-    <div class="svc-card"><span class="svc-icon">⚙️</span><h3>Full Stack Dev</h3><p>End-to-end web applications from database architecture to polished frontend UI.</p></div>
-    <div class="svc-card"><span class="svc-icon">✏️</span><h3>UI/UX Design</h3><p>User-centered design systems, wireframes, and high-fidelity Figma prototypes.</p></div>
-    <div class="svc-card"><span class="svc-icon">📊</span><h3>Dashboard Design</h3><p>Data-driven admin dashboards and analytics interfaces with intuitive UX.</p></div>
-    <div class="svc-card"><span class="svc-icon">🤖</span><h3>AI Solutions</h3><p>Integrating AI/ML capabilities into web apps for smarter digital experiences.</p></div>
+    <div class="miniproj-grid">
+      <div class="miniproj">Rock Paper Scissors</div>
+      <div class="miniproj">Currency Converter</div>
+      <div class="miniproj">Cat Facts Generator</div>
+      <div class="miniproj">Todo App</div>
+      <div class="miniproj">Weather App</div>
+      <div class="miniproj">Quiz App</div>
+      <div class="miniproj">Password Generator</div>
+      <div class="miniproj">Digital Clock</div>
+      <div class="miniproj">Stopwatch</div>
+      <div class="miniproj">Image Slider</div>
+      <div class="miniproj">Expense Tracker</div>
+      <div class="miniproj">Calculator</div>
+      <div class="miniproj">GitHub Profile Finder</div>
+    </div>
   </div>
 </section>
-</div>
-
-<div class="div-line"></div>
 
 <!-- ══════════════════════════════
-     CONTACT SECTION (CORRECTED)
+     JOURNEY
 ══════════════════════════════ -->
-<section id="contact" class="reveal">
-  <div class="section-header">
-    <span class="section-num">07 //</span>
-    <h2 class="section-title">Contact</h2>
-    <div class="section-line"></div>
-  </div>
+<section id="experience">
+  <div class="container">
+    <div class="section-head">
+      <h2>Journey</h2>
+      <div class="rule"></div>
+    </div>
 
-  <div class="contact-grid">
+    <div class="timeline">
+
+      <div class="timeline-row">
+        <div class="timeline-when">2024–2028</div>
+        <div class="timeline-what">
+          <h3>B.Tech, Computer Science Engineering</h3>
+          <p>Pursuing a Bachelor of Technology in Computer Science Engineering at Ganga Institute of Technology and Management, Jhajjar.</p>
+        </div>
+      </div>
+
+      <div class="timeline-row">
+        <div class="timeline-when">Design</div>
+        <div class="timeline-what">
+          <h3>UI/UX design in Figma</h3>
+          <p>Designed responsive interfaces with a focus on usability, clean layouts and user-centered design.</p>
+        </div>
+      </div>
+
+      <div class="timeline-row">
+        <div class="timeline-when">Project</div>
+        <div class="timeline-what">
+          <h3>Wanderlust</h3>
+          <p>Built a full-stack application with authentication, listings, reviews and ratings, plus search, filtering and maps.</p>
+        </div>
+      </div>
+
+      <div class="timeline-row">
+        <div class="timeline-when">Now</div>
+        <div class="timeline-what">
+          <h3>Full-stack web development</h3>
+          <p>Building responsive, user-focused applications with React.js, Node.js and MongoDB — including REST APIs, authentication and database integration.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════
+     CAPABILITIES
+══════════════════════════════ -->
+<section id="achievements" class="section-tinted">
+  <div class="container">
+    <div class="section-head">
+      <h2>Capabilities</h2>
+      <div class="rule"></div>
+    </div>
+
+    <div class="capability-grid">
+      <div class="capability"><h4>Full-stack development</h4><p>Hands-on experience building responsive, user-focused full-stack applications.</p></div>
+      <div class="capability"><h4>API integration</h4><p>Experience with REST APIs, authentication and backend integration.</p></div>
+      <div class="capability"><h4>Database design</h4><p>Working experience with MongoDB and MySQL for application data.</p></div>
+      <div class="capability"><h4>Interface design</h4><p>A strong eye for responsive layouts, usability and clean interfaces.</p></div>
+      <div class="capability"><h4>Version control</h4><p>Git and GitHub, supporting modern collaborative development workflows.</p></div>
+      <div class="capability"><h4>Problem solving</h4><p>Practical solutions, built with creativity, adaptability and continuous learning.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════
+     CONTACT
+══════════════════════════════ -->
+<section id="contact">
+  <div class="container contact-grid">
 
     <div class="contact-info">
-      <h3>Let's Build Something Great</h3>
-      <p>Whether you have a project in mind, a collaboration idea, or just want to connect — I'm always open to interesting conversations and opportunities.</p>
-      <p class="c-email">📧 raj.uixwebdev@gmail.com</p>
-
-      <div class="social-row">
-        <a href="https://github.com/rajuix-dev" class="social-link" target="_blank">⭐ GitHub</a>
-        <a href="https://www.linkedin.com/in/raj-gupta-40a896348" class="social-link" target="_blank">💼 LinkedIn</a>
-        <a href="https://x.com/RajGupt98490637" class="social-link" target="_blank">🐦 Twitter</a>
+      <div class="section-head">
+        <h2>Contact</h2>
+        <div class="rule"></div>
       </div>
-
-      <a href="#" class="btn btn-primary" id="resumeBtn2">⬇ Download Resume</a>
+      <h3>Have a project in mind?</h3>
+      <p>I'm open to opportunities, collaborations and projects in full-stack development, frontend engineering and UI/UX design. Send a note — I read every one.</p>
+      <a href="mailto:raj.uixwebdev@gmail.com" class="contact-email">raj.uixwebdev@gmail.com</a>
+      <div class="contact-links">
+        <a href="https://www.linkedin.com/in/raj-gupta-40a896348/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="./Raj_Gupta_Resume.docx" id="resumeBtn2" download>Download resume</a>
+      </div>
     </div>
 
-    <!-- ✅ CORRECTED FORM - EmailJS ke saath -->
     <form id="contactForm" class="contact-form" onsubmit="return false;">
       <div class="form-group">
-        <label>Your Name *</label>
+        <label for="fromName">Your name</label>
         <input type="text" name="from_name" id="fromName" placeholder="John Doe" required>
       </div>
       <div class="form-group">
-        <label>Email Address *</label>
+        <label for="fromEmail">Email address</label>
         <input type="email" name="from_email" id="fromEmail" placeholder="john@example.com" required>
       </div>
       <div class="form-group">
-        <label>Subject</label>
-        <input type="text" name="subject" id="subject" placeholder="Project Collaboration">
+        <label for="subject">Subject</label>
+        <input type="text" name="subject" id="subject" placeholder="Project collaboration">
       </div>
       <div class="form-group">
-        <label>Message *</label>
+        <label for="message">Message</label>
         <textarea name="message" id="message" placeholder="Tell me about your project..." required></textarea>
       </div>
-      <button type="submit" id="submitBtn" class="btn btn-primary" style="width:100%;justify-content:center">
-        <span id="btnText">Send Message →</span>
-        <span id="btnLoader" style="display:none;">⏳ Sending...</span>
+      <button type="submit" id="submitBtn" class="btn-ink btn-full">
+        <span id="btnText">Send message</span>
+        <span id="btnLoader" style="display:none;">Sending…</span>
       </button>
-      <div id="formStatus" style="display:none; padding: 0.8rem; border-radius: 7px; text-align: center; font-size: 0.85rem; margin-top: 0.5rem;"></div>
+      <div id="formStatus" class="form-status"></div>
     </form>
 
   </div>
 </section>
 
+</main>
+
 <!-- ══════════════════════════════
      FOOTER
 ══════════════════════════════ -->
-<div class="div-line"></div>
-<div class="footer-wrap">
-  <div>
-    <div class="footer-name">Raj Gupta</div>
-    <div class="footer-sub">B.Tech CSE (2024–2028) · Full Stack Developer · AI Innovator</div>
+<footer class="footer">
+  <div class="container footer-inner">
+    <div>
+      <div class="footer-name">Raj Gupta</div>
+      <div class="footer-sub">B.Tech CSE (2024–2028) · Full-stack developer · UI/UX designer</div>
+    </div>
+    <div class="footer-right">Designed &amp; built by Raj Gupta · 2026</div>
   </div>
-  <div class="footer-right">Designed &amp; Built by Raj Gupta · 2025</div>
-</div>
+</footer>
 
 <script src="script.js"></script>
 </body>
